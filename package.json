@@ -6,7 +6,7 @@
   "scripts": {
     "prestart": "npm run -s build",
     "start": "node dist/app.js",
-    "dev": "nodemon server/app.js --exec \"node -r dotenv/config -r babel-register\"",
+    "dev": "cross-env NODE_ENV=development nodemon server/app.js --exec \"node -r dotenv/config -r babel-register\"",
     "clean": "rimraf dist",
     "build": "npm run clean && mkdir -p dist && babel server -s -D -d dist"
   },
