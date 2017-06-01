@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 
 class App extends Component {
   state = {
@@ -16,7 +15,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>utmo</h1>
-        {this.state.greet.map(greet => <div key={greet.type}>{greet.username}</div>)}
+        {this.state.greet.map(greet => <div key={greet.id}>{greet.type}</div>)}
       </div>
     );
   }
