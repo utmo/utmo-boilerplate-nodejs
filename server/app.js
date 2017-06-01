@@ -10,12 +10,6 @@ const app = express();
 
 middlewaresConfig(app);
 
-app.get('/', (req, res) => {
-  res.send('Hello utmo!');
-});
-
-console.log('apiRoutes :) ', apiRoutes);
-
 apiRoutes(app);
 
 app.listen(constants.PORT, err => {
